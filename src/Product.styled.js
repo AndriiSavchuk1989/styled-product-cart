@@ -4,6 +4,9 @@ const Product = {};
 
 const boot = "https://image.flaticon.com/icons/svg/79/79828.svg";
 const kit = "https://image.flaticon.com/icons/svg/79/79693.svg";
+const info =
+  "https://cdn4.iconfinder.com/data/icons/miu/24/circle-info-more-information-detail-outline-stroke-512.png";
+const basket = "https://image.flaticon.com/icons/png/512/34/34562.png";
 
 Product.Wrapper = styled.div`
   display: flex;
@@ -35,6 +38,20 @@ Product.Icon = styled.div(({ type }) => {
     position: absolute;
     top: 0;
     right: 0;
+  `;
+});
+
+Product.ButtonBackground = styled.div(({ action }) => {
+  let buttonBackground = "";
+  if (action === "info") {
+    buttonBackground = `${info}`;
+  } else {
+    buttonBackground = `${basket}`;
+  }
+  return css`
+    background-image: url(${buttonBackground});
+    background-size: cover;
+    background-position: center;
   `;
 });
 
@@ -71,12 +88,12 @@ Product.ButtonsWrapper = styled.div`
 `;
 
 Product.Button = styled.button`
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   margin: 5px;
-  border-radius: 40px;
+  border-radius: 60px;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
   position: relative;
   cursor: pointer;
 `;

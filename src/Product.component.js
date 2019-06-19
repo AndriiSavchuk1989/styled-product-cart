@@ -15,8 +15,10 @@ const ProductComponent = props => {
         <Product.Price>${product.price}</Product.Price>
       </Product.Details>
       <Product.ButtonsWrapper>
-        <Product.InfoButton>More info</Product.InfoButton>
-        <Product.AddToBasketButton>Add to basket</Product.AddToBasketButton>
+        <Product.InfoButton>
+          <Product.ButtonBackground action="info" />
+        </Product.InfoButton>
+        <Product.AddToBasketButton />
       </Product.ButtonsWrapper>
     </Product.Wrapper>
   );
