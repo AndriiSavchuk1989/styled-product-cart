@@ -37,6 +37,7 @@ Product.Wrapper = styled.div`
   border: 1px solid black;
   margin: 2px 2px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 `;
 
 Product.Image = styled.img`
