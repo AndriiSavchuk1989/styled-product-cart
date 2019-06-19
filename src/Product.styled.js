@@ -5,7 +5,7 @@ const Product = {};
 const boot = "https://image.flaticon.com/icons/svg/79/79828.svg";
 const kit = "https://image.flaticon.com/icons/svg/79/79693.svg";
 const info =
-  "https://cdn4.iconfinder.com/data/icons/miu/24/circle-info-more-information-detail-outline-stroke-512.png";
+  "https://finbank.ru/wp-content/themes/specular/specular/img/info-icon.png";
 const basket = "https://image.flaticon.com/icons/png/512/34/34562.png";
 
 Product.Wrapper = styled.div`
@@ -49,12 +49,16 @@ Product.ButtonBackground = styled.div(({ action }) => {
     buttonBackground = `${basket}`;
   }
   return css`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-image: url(${buttonBackground});
     background-size: 40px 40px;
     background-position: center;
     background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   `;
 });
 
@@ -91,13 +95,14 @@ Product.ButtonsWrapper = styled.div`
 `;
 
 Product.Button = styled.button`
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   margin: 5px;
-  border-radius: 60px;
+  border-radius: 50px;
   border: none;
   font-size: 14px;
   position: relative;
+  background-color: white;
   cursor: pointer;
 `;
 
