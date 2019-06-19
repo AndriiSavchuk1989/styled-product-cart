@@ -17,7 +17,7 @@ const fadeIn = keyframes`
   }
 `;
 
-const buttonsDown = keyframes`
+const lifting = keyframes`
   0% {
     margin-top: 50%;
   }
@@ -131,7 +131,7 @@ Product.ButtonsWrapper = styled.div`
   transform: translate(-50%, -75%);
   ${Product.Wrapper}:hover & {
     visibility: visible;
-    animation: 1s ${fadeIn} ease-out, 1s ${buttonsDown} ease-out;
+    animation: 1s ${fadeIn} ease-out, 1s ${lifting} ease-out;
   }
 `;
 
