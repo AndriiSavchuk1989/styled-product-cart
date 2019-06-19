@@ -102,7 +102,8 @@ Product.Button = styled.button`
   border: none;
   font-size: 14px;
   position: relative;
-  background-color: white;
+  background-color: rgba(210, 255, 82, 1);
+  box-shadow: 1px gray;
   cursor: pointer;
 `;
 
