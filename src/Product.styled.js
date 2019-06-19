@@ -50,8 +50,11 @@ Product.ButtonBackground = styled.div(({ action }) => {
   }
   return css`
     background-image: url(${buttonBackground});
-    background-size: cover;
+    background-size: 40px 40px;
     background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
   `;
 });
 
@@ -98,18 +101,8 @@ Product.Button = styled.button`
   cursor: pointer;
 `;
 
-Product.InfoButton = styled(Product.Button)`
-  & > * {
-    background-size: 60px 60px;
-    text-decoration: none;
-    color: #000;
-    font-family: sans-serif;
-    font-weight: bolder;
-  }
-`;
+Product.InfoButton = styled(Product.Button)``;
 
-Product.AddToBasketButton = styled(Product.Button)`
-  background-size: 60px 60px;
-`;
+Product.AddToBasketButton = styled(Product.Button)``;
 
 export default Product;

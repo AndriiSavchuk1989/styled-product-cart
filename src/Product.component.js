@@ -18,7 +18,9 @@ const ProductComponent = props => {
         <Product.InfoButton>
           <Product.ButtonBackground action="info" />
         </Product.InfoButton>
-        <Product.AddToBasketButton />
+        <Product.AddToBasketButton>
+          <Product.ButtonBackground action="basket" />
+        </Product.AddToBasketButton>
       </Product.ButtonsWrapper>
     </Product.Wrapper>
   );
