@@ -8,6 +8,15 @@ const info =
   "https://finbank.ru/wp-content/themes/specular/specular/img/info-icon.png";
 const basket = "https://image.flaticon.com/icons/png/512/34/34562.png";
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
 Product.Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -68,6 +77,9 @@ Product.ButtonBackground = styled.div(({ action }) => {
 Product.Details = styled.div`
   display: flex;
   flex-direction: column;
+  ${Product.Wrapper}:hover & {
+    visibility: hidden;
+  }
 `;
 
 Product.Name = styled.p`
@@ -80,6 +92,9 @@ Product.Name = styled.p`
 Product.Price = styled.p`
   text-align: center;
   padding: 5px;
+  ${Product.Wrapper}:hover & {
+    visibility: hidden;
+  }
 `;
 
 Product.Country = styled.p`
@@ -90,6 +105,9 @@ Product.Country = styled.p`
 Product.Description = styled.p`
   text-align: center;
   padding: 5px;
+  ${Product.Wrapper}:hover & {
+    visibility: hidden;
+  }
 `;
 
 Product.ButtonsWrapper = styled.div`
@@ -102,6 +120,7 @@ Product.ButtonsWrapper = styled.div`
   transform: translate(-50%, -50%);
   ${Product.Wrapper}:hover & {
     visibility: visible;
+    animation: 2s ${fadeIn} ease-out;
   }
 `;
 

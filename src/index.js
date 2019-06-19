@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import ProductComponent from "./Product.component";
 
 import "./styles.css";
-import { wrap } from "module";
 
 const products = [
   {
