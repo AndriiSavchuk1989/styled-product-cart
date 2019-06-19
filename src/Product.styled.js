@@ -7,12 +7,15 @@ const kit = "https://image.flaticon.com/icons/svg/79/79693.svg";
 const info =
   "https://finbank.ru/wp-content/themes/specular/specular/img/info-icon.png";
 const basket = "https://image.flaticon.com/icons/png/512/34/34562.png";
+const productBackground =
+  "https://image.freepik.com/photos-gratuite/champ-herbe-texture_1232-251.jpg?1";
 
 Product.Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 30%;
+  min-width: 25%;
   position: relative;
   min-height: 350px;
   border: 1px solid black;
@@ -69,6 +72,9 @@ Product.Details = styled.div`
 
 Product.Name = styled.p`
   text-align: center;
+  ${Product.Wrapper}:hover & {
+    visibility: hidden;
+  }
 `;
 
 Product.Price = styled.p`
@@ -79,7 +85,9 @@ Product.Country = styled.p`
   text-align: center;
 `;
 
-Product.Brand = styled.p``;
+Product.Description = styled.p`
+  text-align: center;
+`;
 
 Product.ButtonsWrapper = styled.div`
   display: flex;

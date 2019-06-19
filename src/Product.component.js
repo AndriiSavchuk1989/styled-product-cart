@@ -12,6 +12,7 @@ const ProductComponent = props => {
       <Product.Details>
         <Product.Name>{product.name}</Product.Name>
         <Product.Country>{product.country}</Product.Country>
+        <Product.Description>{product.description}</Product.Description>
         <Product.Price>${product.price}</Product.Price>
       </Product.Details>
       <Product.ButtonsWrapper>
