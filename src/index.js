@@ -18,7 +18,9 @@ const Shop = props => {
         marginBottom: 0,
         marginLeft: "auto",
         marginRight: "auto",
-        flexWrap: "wrap"
+        flexWrap: "wrap",
+        justifyContent: "center",
+        alignItems: "flex-end"
       }}
     >
       {props.products.map(item => (

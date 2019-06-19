@@ -284,5 +284,16 @@ export const products = [
     image: "https://images.sportsdirect.com/images/products/19300918_l.jpg",
     quantity: 1,
     count: 20
+  },
+  {
+    id: "28",
+    type: "boot",
+    country: "Germany",
+    name: "adidas Predator 19.1 Mens SG Football Boots",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    price: 150,
+    image: "https://images.sportsdirect.com/images/products/19300918_l.jpg",
+    quantity: 1,
+    count: 20
   }
 ];
