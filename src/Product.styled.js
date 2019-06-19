@@ -35,7 +35,6 @@ Product.Wrapper = styled.div`
   min-width: 25%;
   position: relative;
   min-height: 350px;
-  border: 1px solid black;
   margin: 2px 2px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -62,7 +61,7 @@ Product.Discount = styled.div`
     bottom: -50%;
     left: 10px;
   }
-  border-color: green transparent transparent transparent;
+  border-color: rgba(210, 255, 82, 1) transparent transparent transparent;
   ${breakpoint("tablet")`
     border-width: 80px 80px 0 0;
   `}
