@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
+import breakpoint from "styled-components-breakpoint";
 
 const Product = {};
 
@@ -43,6 +44,28 @@ Product.Wrapper = styled.div`
 Product.Image = styled.img`
   flex-basis: 200px;
   max-width: 75%;
+`;
+
+Product.Discount = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 80px 80px 0 0;
+  &:before {
+    content: "-50%";
+    position: absolute;
+    transform: rotate(-45deg);
+    top: -45px;
+    bottom: -50%;
+    left: 10px;
+  }
+  border-color: green transparent transparent transparent;
+  ${breakpoint("tablet")`
+    border-width: 80px 80px 0 0;
+  `}
 `;
 
 Product.Icon = styled.div(({ type }) => {
@@ -146,6 +169,7 @@ Product.Button = styled.button`
   position: relative;
   background-color: rgba(210, 255, 82, 1);
   cursor: pointer;
+  outline: transparent;
   box-shadow: 0 0 10px rgba(210, 255, 82, 0.5);
   :hover {
     box-shadow: none;

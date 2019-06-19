@@ -7,7 +7,6 @@ import { products } from "./data";
 import "./styles.css";
 
 const Product = _Enhancer(ProductComponent);
-console.log(Product);
 
 const Shop = props => {
   return (
