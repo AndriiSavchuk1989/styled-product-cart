@@ -12,8 +12,11 @@ const ProductComponent = props => {
       <Product.Details>
         <Product.Name>{product.name}</Product.Name>
         <Product.Country>{product.country}</Product.Country>
-        <Product.Description>{product.description}</Product.Description>
-        <Product.Price>${product.price}</Product.Price>
+        <Product.Description>
+          Description: {product.description}
+        </Product.Description>
+        <Product.Price>Price: ${product.price}</Product.Price>
+        <Product.Count>Left: {product.count}</Product.Count>
       </Product.Details>
       <Product.ButtonsWrapper>
         <Product.InfoButton onClick={props.handleClick}>

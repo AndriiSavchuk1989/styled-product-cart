@@ -11,7 +11,7 @@ const Enhancer = Component => {
     }
 
     handleClick = () => {
-      console.log(this.state.product.id);
+      console.log(`product id:${this.state.product.id}`);
     };
 
     handleAddToBasket = () => {

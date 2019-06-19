@@ -13,16 +13,16 @@ const fadeIn = keyframes`
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 0.85;
   }
 `;
 
-const fadeOut = keyframes`
+const buttonsDown = keyframes`
   0% {
-    opacity: 1;
+    margin-top: 50%;
   }
   100% {
-    opacity: 0;
+    margin-top: 0%;
   }
 `;
 
@@ -75,11 +75,11 @@ Product.ButtonBackground = styled.div(({ action }) => {
     left: 50%;
     transform: translate(-50%, -50%);
     background-image: url(${buttonBackground});
-    background-size: 40px 40px;
+    background-size: 30px 30px;
     background-position: center;
     background-repeat: no-repeat;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   `;
 });
 
@@ -87,27 +87,38 @@ Product.Details = styled.div`
   display: flex;
   flex-direction: column;
   ${Product.Wrapper}:hover & {
-    animation: 1s ${fadeOut} ease-out;
+    display: none;
   }
 `;
 
 Product.Name = styled.p`
+  font-size: 18px;
   text-align: center;
-`;
-
-Product.Price = styled.p`
-  text-align: center;
-  padding: 5px;
+  height: 20px;
+  overflow-y: hidden;
 `;
 
 Product.Country = styled.p`
+  font-size: 16px;
   text-align: center;
   padding: 5px;
 `;
 
 Product.Description = styled.p`
+  font-size: 14px;
   text-align: center;
   padding: 5px;
+`;
+
+Product.Price = styled.p`
+  font-size: 12px;
+  text-align: center;
+  padding: 5px;
+`;
+
+Product.Count = styled.p`
+  text-align: center;
+  font-size: 10px;
 `;
 
 Product.ButtonsWrapper = styled.div`
@@ -115,12 +126,12 @@ Product.ButtonsWrapper = styled.div`
   visibility: hidden;
   justify-content: space-evenly;
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -75%);
   ${Product.Wrapper}:hover & {
     visibility: visible;
-    animation: 2s ${fadeIn} ease-out;
+    animation: 1s ${fadeIn} ease-out, 1s ${buttonsDown} ease-out;
   }
 `;
 
@@ -133,8 +144,12 @@ Product.Button = styled.button`
   font-size: 14px;
   position: relative;
   background-color: rgba(210, 255, 82, 1);
-  box-shadow: 1px gray;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(210, 255, 82, 0.5);
+  :hover {
+    box-shadow: none;
+    background-color: yellow;
+  }
 `;
 
 Product.InfoButton = styled(Product.Button)``;
