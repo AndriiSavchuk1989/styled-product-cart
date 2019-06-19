@@ -7,7 +7,7 @@ const ProductComponent = props => {
   //console.log(product.type);
   return (
     <Product.Wrapper>
-      <Product.Icon1 type={type} />
+      <Product.Icon type={type} />
       <Product.Image src={product.image} />
       <Product.Details>
         <Product.Name>{product.name}</Product.Name>

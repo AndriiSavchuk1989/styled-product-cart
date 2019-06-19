@@ -9,7 +9,7 @@ Product.Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 20%;
+  max-width: 30%;
   position: relative;
   min-height: 350px;
   border: 1px solid black;
@@ -20,17 +20,7 @@ Product.Image = styled.img`
   max-width: 75%;
 `;
 
-Product.Icon = styled.div`
-  background-image: url(${kit});
-  width: 25px;
-  height: 25px;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  right: 0;
-`;
-
-Product.Icon1 = styled.div(({ type }) => {
+Product.Icon = styled.div(({ type }) => {
   let backgroundimage = "";
   if (type === "kit") {
     backgroundimage = `${kit}`;
