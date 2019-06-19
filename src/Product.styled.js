@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 const Product = {};
 
@@ -7,8 +7,6 @@ const kit = "https://image.flaticon.com/icons/svg/79/79693.svg";
 const info =
   "https://finbank.ru/wp-content/themes/specular/specular/img/info-icon.png";
 const basket = "https://image.flaticon.com/icons/png/512/34/34562.png";
-const productBackground =
-  "https://image.freepik.com/photos-gratuite/champ-herbe-texture_1232-251.jpg?1";
 
 Product.Wrapper = styled.div`
   display: flex;
@@ -19,6 +17,8 @@ Product.Wrapper = styled.div`
   position: relative;
   min-height: 350px;
   border: 1px solid black;
+  margin: 2px 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 `;
 
 Product.Image = styled.img`
@@ -40,7 +40,7 @@ Product.Icon = styled.div(({ type }) => {
     background-size: cover;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 5px;
   `;
 });
 
@@ -79,14 +79,17 @@ Product.Name = styled.p`
 
 Product.Price = styled.p`
   text-align: center;
+  padding: 5px;
 `;
 
 Product.Country = styled.p`
   text-align: center;
+  padding: 5px;
 `;
 
 Product.Description = styled.p`
   text-align: center;
+  padding: 5px;
 `;
 
 Product.ButtonsWrapper = styled.div`
