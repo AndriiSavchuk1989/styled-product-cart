@@ -1,8 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import ProductComponent from "./Product.component";
+import _Enhancer from "./ProductContainer";
 
 import "./styles.css";
+
+const Product = _Enhancer(ProductComponent);
+console.log(Product);
 
 const products = [
   {
@@ -56,6 +60,7 @@ const products = [
     quantity: 1
   }
 ];
+
 const Shop = props => {
   return (
     <div
@@ -69,7 +74,7 @@ const Shop = props => {
       }}
     >
       {props.products.map(item => (
-        <ProductComponent key={item.id} product={item} />
+        <Product key={item.id} product={item} />
       ))}
     </div>
   );

@@ -17,6 +17,15 @@ const fadeIn = keyframes`
   }
 `;
 
+const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
+
 Product.Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -78,23 +87,17 @@ Product.Details = styled.div`
   display: flex;
   flex-direction: column;
   ${Product.Wrapper}:hover & {
-    visibility: hidden;
+    animation: 1s ${fadeOut} ease-out;
   }
 `;
 
 Product.Name = styled.p`
   text-align: center;
-  ${Product.Wrapper}:hover & {
-    visibility: hidden;
-  }
 `;
 
 Product.Price = styled.p`
   text-align: center;
   padding: 5px;
-  ${Product.Wrapper}:hover & {
-    visibility: hidden;
-  }
 `;
 
 Product.Country = styled.p`
@@ -105,9 +108,6 @@ Product.Country = styled.p`
 Product.Description = styled.p`
   text-align: center;
   padding: 5px;
-  ${Product.Wrapper}:hover & {
-    visibility: hidden;
-  }
 `;
 
 Product.ButtonsWrapper = styled.div`

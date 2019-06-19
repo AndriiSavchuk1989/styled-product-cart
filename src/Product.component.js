@@ -16,10 +16,10 @@ const ProductComponent = props => {
         <Product.Price>${product.price}</Product.Price>
       </Product.Details>
       <Product.ButtonsWrapper>
-        <Product.InfoButton>
+        <Product.InfoButton onClick={props.handleClick}>
           <Product.ButtonBackground action="info" />
         </Product.InfoButton>
-        <Product.AddToBasketButton>
+        <Product.AddToBasketButton onClick={props.handleAddToBasket}>
           <Product.ButtonBackground action="basket" />
         </Product.AddToBasketButton>
       </Product.ButtonsWrapper>
