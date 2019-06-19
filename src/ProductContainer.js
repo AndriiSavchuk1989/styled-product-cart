@@ -3,8 +3,9 @@ import React from "react";
 const Enhancer = Component => {
   class _Enhancer extends React.Component {
     constructor(props) {
+      const { product } = props;
       super(props);
-      this.state = { product: { ...props.product } };
+      this.state = { product: { ...product } };
       this.state.handleClick = this.handleClick.bind(this);
       this.state.handleAddToBasket = this.handleAddToBasket.bind(this);
     }
