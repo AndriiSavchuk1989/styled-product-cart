@@ -52,18 +52,30 @@ Product.Discount = styled.div`
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 80px 80px 0 0;
+  border-width: 60px 60px 0 0;
   &:before {
     content: "-50%";
+    color: red;
     position: absolute;
     transform: rotate(-45deg);
-    top: -45px;
+    transform-origin: top left;
+    top: -35px;
     bottom: -50%;
-    left: 10px;
+    left: 5px;
   }
   border-color: rgba(210, 255, 82, 1) transparent transparent transparent;
   ${breakpoint("tablet")`
     border-width: 80px 80px 0 0;
+    &:before {
+    content: "-50%";
+    color: red;
+    position: absolute;
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    top: -45px;
+    bottom: -50%;
+    left: 10px;
+  }
   `}
 `;
 
